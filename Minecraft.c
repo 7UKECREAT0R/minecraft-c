@@ -248,6 +248,7 @@ int set_item_count_current(int count) {
 	int i = inventoryCursor - 1;
 	if (i < 0) i = 9;
 	set_item_count(i, count);
+	return 0;
 }
 
 int add_item(BLOCK b, int count) {
@@ -390,7 +391,6 @@ int int_to_string(int in) {
 	if (in < 0)
 		return 1;
 
-	int first, last;
 	if (in < 10) {
 		char c = int_to_char(in);
 		intToStringBuf[0] = '0';
